@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GitHub Developer Explorer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!--  NAVBAR -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">GitHub <span class="logo-dot">Explorer</span></div>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO + SEARCH -->
+  <section id="hero">
+    <div class="hero-container">
+
+      <p class="hero-eyebrow">OJT Capstone Project 2026</p>
+      <h1 class="hero-title">Search any <span class="hero-highlight">GitHub user</span></h1>
+      <p class="hero-subtitle">
+        Enter a GitHub username to explore their profile,
+        repositories, and language stats.
+      </p>
+
+      <!-- SEARCH BOX -->
+      <div class="search-box">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Enter GitHub username e.g. vivekingle"
+          autocomplete="off"
+        />
+        <button id="searchBtn">Search</button>
+      </div>
+
+      <p class="search-error" id="searchError"></p>
+
+    </div>
+  </section>
+
+  <!--cRESULTS AREA  -->
+  <div class="loading-spinner hidden" id="loadingSpinner">
+    <div class="spinner"></div>
+    <p>Fetching GitHub data...</p>
+  </div>
+
+  <!-- Profile card section -->
+  <section id="profileSection" class="hidden">
+    <div class="section-container">
+      <div id="profileCard">
+        <!-- JS builds this -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Repos section -->
+  <section id="reposSection" class="hidden">
+    <div class="section-container">
+
+      <div class="repos-header">
+        <h2 class="section-title">Repositories</h2>
+        <!-- Sort dropdown -->
+        <select id="sortSelect">
+          <option value="stars">⭐ Sort by Stars</option>
+          <option value="name">🔤 Sort by Name</option>
+          <option value="forks">🍴 Sort by Forks</option>
+          <option value="updated">🕒 Sort by Updated</option>
+        </select>
+      </div>
+
+      <!-- Language breakdown bar -->
+      <div id="languageBar">
+        <!-- JS builds this -->
+      </div>
+
+      <!-- Repo cards -->
+      <div id="reposGrid">
+        <!-- JS builds this -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER-->
+  <footer id="footer">
+    <p>GitHub Developer Explorer &middot; OJT Capstone 2026</p>
+    <p>Uses the public GitHub REST API &middot; 60 req/hour limit</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
